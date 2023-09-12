@@ -1,0 +1,37 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+  
+}
+
+.mini-chart {
+  margin-top: -70%;
+  width: 100%; /* Set the width to 100% of the container */
+  height: 100%; /* Set the height to 100% of the container */
+}
+.mat-h2 {
+  color: darkblue;
+  font-size: 170%;
+}
+.icon {
+  font-size: inherit; /* Inherit the font size from the parent element */
+  vertical-align: middle; /* Vertically align the icon to the middle */
+  margin-right: 8px; /* Add some right margin to separate the icon from the text */
+}

@@ -1,0 +1,52 @@
+<div mat-dialog-title>
+  <h1>{{ Status }}</h1>
+</div>
+<form [formGroup]="employeeForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Ex. John"
+          formControlName="firstName"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Ex. Kingston" formControlName="lastName" />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Age</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Ex. 24"
+          formControlName="age"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Salary</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Ex. 3000"
+          formControlName="salary"
+        />
+        <mat-hint>In dollars</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div mat-dialog-actions class="actions">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">
+      Cancel
+    </button>
+    <button mat-raised-button color="primary" type="submit">
+      {{ data ? "Save" : "Save" }}
+    </button>
+  </div>
+</form>

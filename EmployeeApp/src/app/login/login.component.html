@@ -1,0 +1,33 @@
+<div class="login-container">
+  <div class="background-image"></div>
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="userForm" (ngSubmit)="onLoginButtonClick()">
+        <h2>Log In</h2>
+        <mat-form-field class="input-login">
+          <input
+            matInput
+            placeholder="Email"
+            required
+            formControlName="userName"
+          />
+          <mat-error>Please provide a valid email address</mat-error>
+        </mat-form-field>
+        <mat-form-field class="input-login">
+          <input
+            matInput
+            type="password"
+            placeholder="Password"
+            required
+            formControlName="password"
+          />
+        </mat-form-field>
+        <mat-error *ngIf="invalid"
+          >Please provide a valid user name and password</mat-error
+        >
+        <button mat-raised-button color="primary" type="submit">Login</button>
+      </form>
+      <a href="/signup" *ngIf="invalid" class="signUp">Sign Up?</a>
+    </mat-card-content>
+  </mat-card>
+</div>

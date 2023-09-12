@@ -1,0 +1,41 @@
+.login-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh; /* Set the container height to the viewport height */
+    position: relative;
+    padding-right: 13%;
+  }
+  
+  .background-image {
+    background-image: url('src/assets/office.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Adjust the width to control the image size */
+    height: 100%;
+    opacity: 0.6; /* Adjust the opacity as needed */
+    z-index: -1; /* Place the background behind other content */
+  }
+  
+  mat-card {
+    max-width: 350px;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust background color and opacity as needed */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for the card */
+    text-align: center;
+  }
+ .input-login{
+  flex: 1;
+ }
+ .signUp {
+  position: absolute;
+  bottom: 0;
+  right: 0; 
+padding: 20px;
+}

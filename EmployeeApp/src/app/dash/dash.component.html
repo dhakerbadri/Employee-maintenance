@@ -1,0 +1,40 @@
+<!--dash.component.html-->
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="200px">
+    <!--Mini Cards-->
+    <mat-grid-tile
+      *ngFor="let stat of statistics"
+      [colspan]="(cardLayout | async)?.miniCard?.cols"
+      [rowspan]="(cardLayout | async)?.miniCard?.rows"
+    >
+      <app-card title="{{ stat.label }}"
+        ><h2 class="mat-h2" [@numberAnimation]>
+          <mat-icon
+            class="icon"
+            aria-hidden="true"
+            aria-label="person icon"
+            fontIcon="person"
+          ></mat-icon>
+          {{ stat.value }} Years
+        </h2>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.miniCard?.cols"
+      [rowspan]="(cardLayout | async)?.miniCard?.rows"
+    >
+      <app-chart class="mini-chart"></app-chart>
+    </mat-grid-tile>
+
+    <!--Table-->
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.table?.cols"
+      [rowspan]="(cardLayout | async)?.table?.rows"
+    >
+      <app-card title="Employees data : ">
+        <app-employees-table></app-employees-table>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

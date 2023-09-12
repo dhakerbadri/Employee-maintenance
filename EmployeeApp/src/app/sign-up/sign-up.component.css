@@ -1,0 +1,36 @@
+/* Style for the outer login container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the container to full viewport height */
+  background-color: #f0f0f0; /* Set a background color for the container */
+}
+
+/* Style for the background image (assuming you want a background image) */
+
+
+/* Style for the material card */
+mat-card {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+}
+
+/* Style for the form inside the card */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for the input fields */
+.input-login {
+  margin-bottom: 15px;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+  margin-top: 20px;
+}
